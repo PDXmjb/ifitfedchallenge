@@ -1,15 +1,17 @@
-import React from 'react'
+import React from 'react';
+import MenuItem from './MenuItem/MenuItem';
+import styles from './Menu.module.scss';
 
 function Menu() {
     return (
-        <div>
-            <div>Logo</div>
+        <div className={styles.Menu}>
+            <div className={styles.Logo}>Logo</div>
             <nav>
-                <ul>
-                    <li>Exercise</li>
-                    <li>Nutrition</li>
-                    <li>Activity</li>
-                    <li>Sleep</li>
+                <ul className={styles.MenuNavigation}>
+                    <MenuItem>Exercise</MenuItem>
+                    <MenuItem>Nutrition</MenuItem>
+                    <MenuItem>Activity</MenuItem>
+                    <MenuItem>Sleep</MenuItem>
                 </ul>
             </nav>
             <a>Sign up</a>

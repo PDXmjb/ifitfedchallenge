@@ -1,0 +1,20 @@
+.Menu {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+
+    .Logo {
+        color: teal;
+    }
+
+    .MenuNavigation {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        align-items: center;
+        height: 100%;
+        display: flex;
+        flex-flow: row;        
+    }
+}
+

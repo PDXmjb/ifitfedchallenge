@@ -1,0 +1,23 @@
+.MenuItem {
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    width: auto;
+    align-items: center;
+}
+
+.MenuItem a {
+    color: rgba(46, 49, 52, 0.8);
+    height: 100%;        
+    padding: 16px 10px;
+    border-bottom: 4px solid transparent;
+}
+
+.MenuItem a:hover,
+.MenuItem a:active,
+.MenuItem a.active {
+    background-color: #8F5C2C;
+    border-bottom: 4px solid #40A4C8;
+    color: rgba(46, 49, 52, 0.8);
+}
