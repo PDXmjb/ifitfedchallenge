@@ -1,8 +1,17 @@
-.Navigation {
-    background-color: #FFFFFF;
-    height: 46px;
+.NavigationDiv {
+    z-index: 1;
+    position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
     border: 1px solid #d5d6d6;
-    margin: 0;
-    padding: 0;
+    border-right: 1px solid transparent;
+
+    .Navigation {
+        background-color: #FFFFFF;
+        height: 46px;
+        margin: 0;
+        padding: 0;
+    }
 }
+

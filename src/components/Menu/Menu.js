@@ -1,11 +1,12 @@
 import React from 'react';
 import MenuItem from './MenuItem/MenuItem';
 import styles from './Menu.module.scss';
+import logo from '../../assets/ifit-coach-logo.svg';
 
 function Menu() {
     return (
         <div className={styles.Menu}>
-            <div className={styles.Logo}>Logo</div>
+            <div className={styles.Logo}><img src={logo}></img></div>
             <nav>
                 <ul className={styles.MenuNavigation}>
                     <MenuItem>Exercise</MenuItem>
@@ -14,7 +15,7 @@ function Menu() {
                     <MenuItem>Sleep</MenuItem>
                 </ul>
             </nav>
-            <a>Sign up</a>
+            <a className={styles.SignUpButton}>Sign up</a>
         </div>
     )
 }

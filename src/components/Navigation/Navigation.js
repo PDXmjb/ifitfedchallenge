@@ -4,7 +4,7 @@ import styles from './Navigation.module.scss'
 
 function Navigation() {
     return (
-        <div>
+        <div className={styles.NavigationDiv}>
             <nav>
                 <ul className={styles.Navigation}>
                     <NavigationButton>Blog</NavigationButton>
