@@ -5,11 +5,12 @@
     box-shadow: 0 1px 2px rgba(46, 49, 52, 0.4);
     border-radius: 4px;
     background-color: #FFFFFF;
-    margin: 24px;
+    margin: 24px 24px 24px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 440px;
 
     p {
         text-align: center;

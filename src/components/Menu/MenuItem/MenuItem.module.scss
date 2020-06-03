@@ -8,9 +8,8 @@
     cursor: pointer;
 }
 
-.MenuItem a {    
-    height: 100%;        
-    padding: 16px 20px;
+.MenuItem a {
+    padding: 0 20px;
     border-bottom: 4px solid transparent;
     cursor: pointer;
     color: rgba(46, 49, 52, 0.8);
@@ -19,11 +18,9 @@
     letter-spacing: 1px;
     line-height: 72px;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
-.MenuItem a:hover,
-.MenuItem a:active,
-.MenuItem a.active {    
-    
+.MenuItem a:hover {    
     color: rgba(46, 49, 52, 1.0);
 }

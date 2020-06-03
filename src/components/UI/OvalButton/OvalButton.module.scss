@@ -1,4 +1,6 @@
 .OvalButton {
+    position: absolute;
+    top: 96px;
     width: 40px;
     height: 40px;
     box-shadow: 0 7px 12px rgba(46, 49, 52, 0.3);
@@ -6,10 +8,27 @@
     background-color: #000c28;
     opacity: 0.8;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #00081a;
+        border: 1px solid rgba(40,225,165,.8);
+        border-radius: 20px;
+    }
+
+    &.Left {
+        left: -20px;
+    }
+
+    &.Right {
+        right: 5px;        
+    }
 
     img {
         width: 8px;
         height: 13px;
-        padding: 13px;
     }
 }

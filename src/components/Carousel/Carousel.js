@@ -7,22 +7,40 @@ import wiredLogo from '../../assets/wired-logo.svg';
 import OvalButton from '../UI/OvalButton/OvalButton';
 
 function Carousel() {
+    const carouselItemsData = [
+        {
+            logoSrc: gearJunkieLogo,
+            quote: '"You focus on putting in the work, and the technology handles the rest."'
+        },
+        {
+            logoSrc: wiredLogo,
+            quote: '"Literally transports you from home to wherever you choose to run."'
+        },
+        {
+            logoSrc: mashableLogo,
+            quote: '"Breathes new life into a tired, old running routine."'
+        }
+    ]
+
+    const carouselItems = carouselItemsData.map((item) => {
+        return <CarouselItem logoSrc={item.logoSrc} quote={item.quote}></CarouselItem>
+    })
+
+    // leftClickHandler = () => {
+    //     alert("CLICKED LEFT");
+    // }
+
+    // rightClickHandler = () => {
+    //     alert("CLICKED RIGHT");
+    // }
+
     return (
         <div className={styles.Carousel}>
-            <OvalButton arrowDirection="left"></OvalButton>
-            <CarouselItem 
-                logoSrc={gearJunkieLogo} 
-                quote='"You focus on putting in the work, and the technology handles the rest."'>                
-            </CarouselItem>
-            <CarouselItem 
-                logoSrc={wiredLogo} 
-                quote='"Literally transports you from home to wherever you choose to run."'>                
-            </CarouselItem>
-            <CarouselItem 
-                logoSrc={mashableLogo} 
-                quote='"Breathes new life into a tired, old running routine."'>                
-            </CarouselItem> 
-            <OvalButton arrowDirection="right"></OvalButton>           
+            <div className={styles.CarouselItems}>
+                <OvalButton arrowDirection="left"></OvalButton>
+                {carouselItems}
+                <OvalButton arrowDirection="right"></OvalButton>
+            </div>
         </div>
     )
 }

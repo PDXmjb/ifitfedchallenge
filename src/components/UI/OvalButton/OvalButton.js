@@ -4,12 +4,14 @@ import leftArrow from '../../../assets/left.png';
 import rightArrow from '../../../assets/right.png';
 
 function OvalButton(props) {
-    let arrow = <img src={rightArrow}></img>
+    let arrow = <img alt="Arrow" src={rightArrow}></img>
+    let classes = [styles.OvalButton, styles.Right];
     if (props.arrowDirection === "left") {
-        arrow = <img src={leftArrow}></img>
+        arrow = <img alt="Arrow" src={leftArrow}></img>
+        classes[1] = styles.Left;
     }
     return (
-        <div className={styles.OvalButton}>
+        <div className={classes.join(" ")}>
             {arrow}
         </div>
     )

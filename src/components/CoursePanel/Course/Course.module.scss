@@ -1,0 +1,56 @@
+.Course {
+    width: 288px;
+    height: 280px;
+    box-shadow: 0 7px 12px rgba(46, 49, 52, 0.3);
+    border-radius: 4px;
+    background-color: #ffffff;
+    display: inline-block;
+    margin: 24px 0 0 24px;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;    
+
+    &:hover {
+        box-shadow: 0 7px 12px rgba(46, 49, 52, 0.8);
+    }
+
+    .CourseDetails {
+        display: flex;
+
+        .CourseDetailsInfo {
+            width: 228px;
+            max-height: 116px;
+            padding-left: 16px;
+
+            .CourseNameLabel {
+                color: #2e3134;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 0.3px;
+                line-height: 18px;
+                margin-bottom: 8px;
+            }
+        
+            .ViewDetailsLink {
+                color: #0069d2;
+                font-size: 14px;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                line-height: 16px;
+                text-transform: uppercase;
+                text-decoration: none;
+                display: block;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .CourseDetailsTrainer {
+            margin-right: 16px;
+            margin-top: 16px;
+        }
+    }
+}

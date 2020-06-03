@@ -4,7 +4,7 @@ import styles from './MenuItem.module.scss'
 function MenuItem(props) {
     return (
         <li className={styles.MenuItem}>
-            <a>{props.children}</a>
+            <a href="/">{props.children}</a>
         </li>
     )
 }
