@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    outline: none;
 
     &:hover {
         background-color: #00081a;
@@ -20,7 +21,7 @@
     }
 
     &.Left {
-        left: -20px;
+        left: 0;
     }
 
     &.Right {

@@ -1,32 +1,33 @@
-// TODO: hide menu behind burger menu; change to navbar styling.
-
-.Menu {
+.SideDrawer {
+    position: fixed;
     margin-top: 46px;
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    min-height: 72px;
-    align-items: center;
-    
-    .Logo {
-        margin-left: 40px;
-    }
+    width: 280px;
+    max-width: 70%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    background-color: white;
+    padding: 32px 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-out;
 
     .MenuNavigation {
         margin: 0;
         padding: 0;
         list-style: none;
-        align-items: center;
+        align-items: flex-start;
         height: 100%;
         display: flex;
-        flex-flow: row;
+        flex-flow: column;
     }
 
     .SignUpButton {
+        display: block;
         margin-right: 24px;
-        margin-left: 40px;
+        margin-left: 18px;
+        margin-top: 12px;
+        padding: 10px;
         width: 90px;
         height: 36px;
         box-shadow: 0 1px 2px rgba(46, 49, 52, 0.4);
@@ -46,15 +47,22 @@
             background-color:  #004d99;
         }
     }
+}
 
-    .ShownLarge {
-        display: none;
-    }
-
-    @media(min-width: 830px) {
-        .ShownLarge {
-            display: unset;
-        }
+@media (min-width: 830px) {
+    .SideDrawer {
+        display: none;        
     }
 }
 
+.Open {
+    transform: translateX(0);
+}
+
+.Close {
+    transform: translateX(-100%)
+}
+
+.Logo {
+    margin-left: 20px;
+}

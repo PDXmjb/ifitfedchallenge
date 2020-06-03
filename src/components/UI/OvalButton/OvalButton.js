@@ -11,9 +11,9 @@ function OvalButton(props) {
         classes[1] = styles.Left;
     }
     return (
-        <div className={classes.join(" ")}>
+        <button onClick={props.click} className={classes.join(" ")}>
             {arrow}
-        </div>
+        </button>
     )
 }
 

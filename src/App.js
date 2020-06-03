@@ -1,10 +1,10 @@
 import React from 'react';
-import Home from './containers/Home/Home';
+import Layout from './containers/Layout/Layout';
 
 function App() {
   return (
     <div>
-      <Home></Home>
+      <Layout></Layout>
     </div>
   );
 }
