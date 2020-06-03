@@ -27,13 +27,11 @@ export default class Carousel extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        console.log("Should update? ", nextState.currentCenter !== this.state.currentCenter)
         return nextState.currentCenter !== this.state.currentCenter;
     }
 
     leftClickHandler = (e) => {
         e.preventDefault();
-        console.log("LEFT CLICK TRIGGERED");
         
         this.setState((prevState) => {
             let center = prevState.currentCenter;
@@ -44,7 +42,6 @@ export default class Carousel extends Component {
             else {
                 center--;
             }
-            console.log("Center: ", center);
 
             return {currentCenter: center};
         })        
@@ -52,7 +49,6 @@ export default class Carousel extends Component {
 
     rightClickHandler = (e) => {
         e.preventDefault();
-        console.log("RIGHT CLICK TRIGGERED");
         
         this.setState((prevState) => {
             let center = prevState.currentCenter;
@@ -63,31 +59,27 @@ export default class Carousel extends Component {
             else {
                 center++;
             }
-            console.log("Center: ", center);
 
             return {currentCenter: center};
         })
     }
 
     render() {
-        const carouselItems = DATA.map((item) => {
-            return <CarouselItem logoSrc={item.logoSrc} quote={item.quote}></CarouselItem>
+        const carouselItems = DATA.map((item, index) => {
+            return <CarouselItem key={index} logoSrc={item.logoSrc} quote={item.quote}></CarouselItem>
         })
 
-        let newItems = [];
-        console.log("Current center: ", this.state.currentCenter);
+        let orderedItems = [];
         for (let i = 0; i < 3; i++)
         {
-            console.log((this.state.currentCenter + i) % 3);
-            newItems[i] = carouselItems[(this.state.currentCenter + i) % 3];
-        }
-    
+            orderedItems[i] = carouselItems[(this.state.currentCenter + i) % 3];
+        }    
         
         return (
             <div className={styles.Carousel}>
                 <div className={styles.CarouselItems}>
                     <OvalButton arrowDirection="left" click={this.leftClickHandler}></OvalButton>
-                    {newItems}
+                    {orderedItems}
                     <OvalButton arrowDirection="right" click={this.rightClickHandler}></OvalButton>
                 </div>
             </div>

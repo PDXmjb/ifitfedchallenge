@@ -16,7 +16,7 @@ const SideDrawer = (props) => {
             <Backdrop show={props.open} clicked={props.closeHandler}></Backdrop>
             <div className={attachedClasses.join(' ')}>                
                 <div className={styles.Logo}>
-                    <img src={logo}></img>
+                    <img alt="Logo" src={logo}></img>
                 </div>            
                 <nav className={styles.ShownLarge}>
                     <ul className={styles.MenuNavigation}>
